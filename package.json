@@ -12,5 +12,8 @@
     "nodes": {
       "firebase-rtdb-connect": "firebase-rtdb-connect.js"
     }
+  },
+  "dependencies": {
+    "firebase": "^9.17.1"
   }
 }
