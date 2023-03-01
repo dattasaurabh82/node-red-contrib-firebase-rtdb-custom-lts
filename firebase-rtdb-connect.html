@@ -1,0 +1,76 @@
+<script type="text/javascript">
+    RED.nodes.registerType('firebase-rtdb-connect', {
+        category: 'network',
+        color: '#FFCC66',
+        defaults: {
+            name: {value:"", required: false},
+            api_key: {value:"", required: true},
+            auth_domain: {value:"", required: true},
+            database_url: {value:"", required: true},
+            project_id: {value:"", required: true},
+            storage_bucket: {value:"", required: true},
+            messaging_sender_id: {value:"", required: true},
+            app_id: {value:"", required: true}
+        },
+        icon: "firebase.svg",
+        label: function() {
+            return this.name||"Firebase RTDB connect";
+        },
+        inputs: 1,               
+        outputs: 2
+    });
+</script>
+
+<script type="text/html" data-template-name="firebase-rtdb-connect">
+    <!-- Name -->
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Firebase RTDB connect">
+    </div>
+
+    <!-- apiKey -->
+    <div class="form-row">
+        <label for="node-input-api_key"><i class="fa fa-key"></i> Api Key</label>
+        <input type="text" id="node-input-api_key"placeholder="BEziPzFHxA0NsUePtM8l2xAIn_P731LCDdMU09c">
+    </div>
+
+     <!-- authDomain -->
+    <div class="form-row">
+        <label for="node-input-auth_domain"><i class="fa fa-globe"></i> Auth Domain</label>
+        <input type="text" id="node-input-auth_domain" placeholder="project-b1at0.firebaseapp.com">
+    </div>
+
+    <!-- databaseURL -->
+    <div class="form-row">
+        <label for="node-input-database_url"><i class="fa fa-link"></i> Database URL</label>
+        <input type="text" id="node-input-database_url" placeholder="https://xxxx.us1.firebasedatabase.app">
+    </div>
+    
+    <!-- projectId -->
+    <div class="form-row">
+        <label for="node-input-project_id"><i class="fa fa-id-card-o"></i> Project ID</label>
+        <input type="text" id="node-input-project_id" placeholder="project-b1at0">
+    </div>
+    
+    <!-- storageBucket -->
+    <div class="form-row">
+        <label for="node-input-storage_bucket"><i class="fa fa-database"></i> Bucket URL</label>
+        <input type="text" id="node-input-storage_bucket" placeholder="project-b1at0.appdrool.com">
+    </div>
+    
+    <!-- messagingSenderId -->
+    <div class="form-row">
+        <label for="node-input-messaging_sender_id"><i class="fa fa-id-card-o"></i> Sender ID</label>
+        <input type="text" id="node-input-messaging_sender_id" placeholder="291421725508">
+    </div>
+    
+    <!-- appId -->
+    <div class="form-row">
+        <label for="node-input-app_id"><i class="fa fa-id-card-o"></i> App ID</label>
+        <input type="text" id="node-input-app_id" placeholder="1:287146891274:web:132846bhbh4893648">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="firebase-rtdb-connect">
+    <p>A node that is used to connect your firebase RTDB from node-red</p>
+</script>
